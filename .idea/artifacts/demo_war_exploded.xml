@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="demo:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/demo_war_exploded</output-path>
+    <root id="archive" name="demo_war exploded.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="RSEWeb" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="google-gson-2.1" />
+          <element id="artifact" artifact-name="untitled:jar" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="RSEWeb/web/Web" />
+    </root>
+  </artifact>
+</component>

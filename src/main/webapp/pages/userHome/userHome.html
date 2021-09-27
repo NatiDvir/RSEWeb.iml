@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title style="color:red">User Home</title>
+
+    <script src="../../common/jquery-2.0.3.min.js"></script>
+    <script src="../../common/context-path-helper.js"></script>
+    <script src="../../common/commonJS.js"></script>
+    <script src="userHome.js"></script>
+    <style>
+        table,th,td {
+            border:1px solid aqua;
+        }
+    </style>
+</head>
+<body style="background-color:lightgoldenrodyellow;">
+<div id="me">
+
+</div>
+<h1 style="color:red">Users:</h1>
+<table style="width:50% ; background-color:seashell" id="userTable">
+    <tr> <th> Name: </th> <th> Type: </th> </tr>
+    <tr> <td> UserName</td> <td> Type </td></tr>
+</table>
+<br/>
+<div id="stockDiv">
+    <table style="width:50% ; background-color:seashell" id="stockTable">
+        <tr> <th> Name: </th> <th> Symbol: </th> <th> Price: </th> <th> Cycle: </th> </tr>
+        <tr> <td> Name</td> <td> Symbol </td> <td> Price </td> <td> Cycle </td></tr>
+    </table>
+</div>
+    <br/>
+<div id="userDiv">
+    <!--all user exclusive components-->
+    <input id="fileInput" type="file" class="fileInput" accept="text/xml" onchange="loadXmlClicked(event)"/>
+    <br/>
+    <button onclick="window.location.href ='../accountManagement/account.html'" style="background-color:mintcream">View Account</button>
+    <br/>
+</div>
+<button style="background-color:mintcream" onclick="logoutClicked()">Logout</button>
+</body>
+</html>

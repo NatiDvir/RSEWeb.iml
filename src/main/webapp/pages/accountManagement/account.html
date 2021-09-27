@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Management</title>
+
+    <script src="../../common/jquery-2.0.3.min.js"></script>
+    <script src="../../common/context-path-helper.js"></script>
+    <script src="../../common/commonJS.js"></script>
+    <script src="account.js"></script>
+    <style>
+        table, th, td{
+            border: black 1px solid;
+
+        }
+        form{
+            border: aqua 1px solid;
+        }
+        *{
+            padding: 3px;
+
+        }
+        #createListingForm > label{
+            size: 500px !important;
+        }
+    </style>
+</head>
+<body style="background-color:lightgoldenrodyellow;">
+
+
+<label>Current balance:</label>
+<div id="userbalance"></div>
+
+<br/>
+
+<form id="loadMoneyFrom" method="post" action="money-servlet">
+    <label style="color:red" for="loadmoney">
+        Please enter the value of money you would like to load in your account , then press 'Load'
+    </label>
+    <input style="padding-bottom: 10px" type="text" id="loadmoney" name="loadmoney"/>
+    <input type="submit" value="Load"/>
+</form>
+<br/>
+<div id="moneyHistoryDiv">
+    <table style="background-color:seashell" id="moneyHistory">
+
+
+    </table>
+</div>
+<br/>
+<div style="border: aqua 1px solid;border-radius: 3px">
+    <h3>Create Listing:</h3>
+    <form id="createListingForm" method="post" action="company-servlet">
+        <p style="color:red;"> Please fill all areas to issue a new company </p>
+        <div class="" >
+            <div>
+                <div style='margin: 1px'>
+                    <label for="companyName">
+                        Company Name:
+                    </label>
+                    <input type="text" id="companyName" name="companyName"/>
+                </div>
+                <br/>
+                <div style='margin: 1px'>
+                    <label for="companySymbol">
+                        Company Symbol:
+                    </label>
+                    <input type="text" id="companySymbol" name="companySymbol"/>
+                </div>
+                <br/>
+                <div style='margin: 1px'>
+                    <label for="companyAmount">
+                        Amount of stocks:
+                    </label>
+                    <input  type="text" id="companyAmount" name="companyAmount"/>
+                </div>
+                <br/>
+                <div style='margin: 1px'>
+                    <label  for="companyWorth">
+                        Company worth:
+                    </label>
+                    <input type="text" id="companyWorth" name="companyWorth"/>
+                </div>
+
+
+            </div>
+        </div>
+        <br/>
+        <input type="submit" value="Create"/>
+
+    </form>
+</div>
+<br/>
+
+<button style="background-color:mintcream" onclick="logoutClicked()">Logout</button>
+<br/>
+<a class="button" href="../../">Back</a>
+
+</body>
+</html>

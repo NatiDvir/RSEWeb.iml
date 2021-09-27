@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <script src="../../common/jquery-2.0.3.min.js"></script>
+  <script src="../../common/context-path-helper.js"></script>
+  <script src="../../common/commonJS.js"></script>
+  <script src="company.js"></script>
+
+  <style>
+    form, th, td{
+      border: aqua 1px solid;
+      padding: 3px;
+    }
+    *{
+      margin: 3px;
+    }
+  </style>
+</head>
+<body style="background-color:lightgoldenrodyellow;" style="font-size:10px">
+<div id="nameHeader"></div>
+<div id="companyDets">
+  <label>Current Price:</label>
+  <div id="companyPrice">
+
+  </div>
+  <label style="color:red">Current cycle:</label>
+  <div id="companyCycle">
+
+  </div>
+</div>
+<div id="companyDealsDiv">
+  <h3 style="color:red">Deals made</h3>
+  <table id="companyDeals" style="background-color:seashell" >
+    <tr>
+      <th style="color:darkblue">Date<th/>
+      <th style="color:darkblue">Amount</th>
+      <th style="color:darkblue">Price</th>
+    </tr>
+  </table>
+  <br/>
+</div>
+<div id="companyDealsSellDiv">
+  <h3 style="color:red">Deals Awaiting Sale</h3>
+  <table id="companyDealsSell" style="background-color:seashell">
+    <tr>
+      <th style="color:darkblue">Date<th/>
+      <th style="color:darkblue">Amount</th>
+      <th style="color:darkblue">Price</th>
+    </tr>
+  </table>
+  <br/>
+</div>
+
+<div id="companyDealsBuyDiv">
+  <h3 style="color:red">Deals Awaiting Buy</h3>
+  <table id="companyDealsBuy" style="background-color:seashell">
+    <tr>
+      <th style="color:darkblue">Date<th/>
+      <th style="color:darkblue">Amount</th>
+      <th style="color:darkblue">Price</th>
+    </tr>
+  </table>
+  <br/>
+</div>
+<div id="userDiv">
+  <label>Number of stock you own:</label>
+  <div id="stocksOwn"></div>
+
+  <form id="tradeForm">
+    <input type="radio" name="buySell"  value="buy">Buy</input>
+    <input type="radio" name="buySell"  value="sell">Sell</input>
+    <br/>
+    <input type="radio" name="dealType" value="LMT">LMT</input>
+    <input type="radio" name="dealType" value="MKT">MKT</input>
+    <input type="radio" name="dealType" value="FOC">FOC</input>
+    <input type="radio" name="dealType" value="IOC">IOC</input>
+    <br/>
+    <label for="amountIn" > Amount: </label>
+    <input type="text" id="amountIn" name="amount"/>
+    <br/>
+    <label for="priceIn">Price: </label>
+    <input type="text" id="priceIn" name="price"/>
+    <br/>
+
+    <input type="hidden" id="stocksOwnHidden" name="stocksOwn"/>
+    <input type="hidden" id="companyNameHidden" name="companyName"/>
+    <input type="hidden" id="companySymbolHidden" name="companySymbol"/>
+    <button type="submit">Make Deal!</button>
+  </form>
+</div>
+<button onclick="logoutClicked()">Logout</button>
+<br/>
+<a class="button" href="../../">Back</a>
+</body>
+</html>

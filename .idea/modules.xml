@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RSEWeb.iml" filepath="$PROJECT_DIR$/RSEWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RSEWebEng/RSEWebEng.iml" filepath="$PROJECT_DIR$/RSEWebEng/RSEWebEng.iml" />
+    </modules>
+  </component>
+</project>
